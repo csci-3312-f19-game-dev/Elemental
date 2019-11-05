@@ -7,6 +7,7 @@ public class Combatant : MonoBehaviour
     // Start is called before the first frame update
     public int health;
     public int[] elementLevels;
-    public void takeDamage(int damage) { }
+    public int numAttacks;
+    public int numShields;
 
 }

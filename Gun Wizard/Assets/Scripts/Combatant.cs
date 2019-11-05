@@ -5,14 +5,8 @@ using UnityEngine;
 public abstract class Combatant : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public abstract int health;
+    public abstract int[] elementLevels;
+    public abstract void takeDamage(int damage);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Combatant : MonoBehaviour
+public class Combatant : MonoBehaviour
 {
     // Start is called before the first frame update
-    public abstract int health;
-    public abstract int[] elementLevels;
-    public abstract void takeDamage(int damage);
+    public int health;
+    public int[] elementLevels;
+    public void takeDamage(int damage) { }
 
 }

@@ -9,4 +9,5 @@ public class Combatant : MonoBehaviour
     public int[] elementLevels;
     public int numAttacks;
     public int numShields;
+
 }

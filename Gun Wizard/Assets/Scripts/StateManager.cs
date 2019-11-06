@@ -7,6 +7,8 @@ public class StateManager : MonoBehaviour
     // Start is called before the first frame update
     public GameObject elementMenue;
     public GameObject actionMenue;
+    public GameObject bm;
+    public GameObject enemy;
 
     void Start()
     {
@@ -26,8 +28,13 @@ public class StateManager : MonoBehaviour
     {
         elementMenue.SetActive(false);
         actionMenue.SetActive(false);
+        bm.GetComponent<BattleManager>().getOutcome();
     }
 
+    public void animate(int playerElem, int playerAct, int enemyElem, int enemyAct)
+    {
+        elementMenue.SetActive(true);
+    }
 
 
     void Update()

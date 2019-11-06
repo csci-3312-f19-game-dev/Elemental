@@ -7,9 +7,12 @@ public class BattleManager : MonoBehaviour
     // Start is called before the first frame update
     public GameObject player;
     public GameObject enemy;
+    public GameObject stateManager;
 
     private Combatant playerScript;
     private Combatant enemyScript;
+    private Enemy enemyMethods;
+    private StateManager sm;
 
     private int enemyCurrentElement;
     private int playerCurrentElement;
@@ -21,6 +24,12 @@ public class BattleManager : MonoBehaviour
     {
         playerScript = player.GetComponent<Combatant>();
         enemyScript = enemy.GetComponent<Combatant>();
+        enemyMethods = enemy.GetComponent<Enemy>();
+        sm = stateManager.GetComponent<StateManager>();
+        playerScript.health = 20;
+        playerScript.elementLevels = new int[] { 1, 1, 1, 1, 1 };
+        playerScript.ammo = 1;
+        playerScript.shields = 1;
     }
 
     // Update is called once per frame
@@ -61,6 +70,71 @@ public class BattleManager : MonoBehaviour
     public void setPlayerRepair()
     {
         playerCurrentAction = 3;
+    }
+
+    public void getOutcome()
+    {
+        int tempEDmgTaken = 0;
+        int tempPDmgTaken = 0;
+        enemyCurrentElement = enemyMethods.getElement();
+        enemyCurrentAction = enemyMethods.getAction();
+        if (playerCurrentAction == 0) {
+            tempEDmgTaken = playerScript.elementLevels[playerCurrentElement] * multiplier(playerCurrentElement, enemyCurrentElement);
+            playerScript.ammo -= 1;
+        }
+        if (enemyCurrentAction == 0)
+        {
+            tempPDmgTaken = enemyScript.elementLevels[enemyCurrentElement] * multiplier(enemyCurrentElement, playerCurrentElement);
+            enemyScript.ammo -= 1;
+        }
+        if (playerCurrentAction == 1) {
+            tempPDmgTaken -= playerScript.elementLevels[playerCurrentElement] * multiplier(playerCurrentElement, enemyCurrentElement);
+            if (tempPDmgTaken < 0) {
+                tempPDmgTaken = 0;
+            }
+            playerScript.shields -= 1;
+        }
+        if (enemyCurrentAction == 1)
+        {
+            tempEDmgTaken -= enemyScript.elementLevels[enemyCurrentElement] * multiplier(enemyCurrentElement, playerCurrentElement);
+            if (tempEDmgTaken < 0)
+            {
+                tempEDmgTaken = 0;
+            }
+            enemyScript.shields -= 1;
+        }
+        if (playerCurrentAction == 2) {
+            playerScript.ammo += 1;
+        }
+        if (enemyCurrentAction == 2) {
+            enemyScript.ammo += 1;
+        }
+        if (playerCurrentAction == 3)
+        {
+            playerScript.shields += 1;
+        }
+        if (enemyCurrentAction == 3)
+        {
+            enemyScript.shields += 1;
+        }
+
+        sm.animate(playerCurrentElement,playerCurrentAction,enemyCurrentElement,enemyCurrentAction);
+
+        playerScript.health -= tempPDmgTaken;
+        enemyScript.health -= tempEDmgTaken;
+    }
+
+    //returns what to multiply e1 by
+    private int multiplier(int e1, int e2) {
+        if (elementCompare(e1, e2) == 1) return 2;
+        else return 1;
+    }
+
+    //returns -1 if enemy beats player, 0 if they're the same, and 1 if player beats enemy
+    private int elementCompare(int p, int e) {
+        if (p == e) return 0;
+        if ((((p + 2) % 5) == e) || (((p - 1) % 5) == e)) return 1;
+        else return -1;
     }
 
 }

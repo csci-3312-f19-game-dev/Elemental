@@ -23,6 +23,33 @@ public class Enemy : MonoBehaviour
         return possibleElems[elementChoice];
     }
     public int getAction(){
-        return Random.Range(0, 3);
+        int act =  Random.Range(0, 3);
+        if(act == 0)
+        {
+            if(EnemyCombatant.ammo > 0)
+            {
+                return act;
+            }
+            else
+            {
+                return 2;
+            }
+        }
+        if (act == 1)
+        {
+            if (EnemyCombatant.shields > 0)
+            {
+                return act;
+            }
+            else
+            {
+                return 3;
+            }
+        }
+        else
+        {
+            return act;
+        }
+
     }
 }

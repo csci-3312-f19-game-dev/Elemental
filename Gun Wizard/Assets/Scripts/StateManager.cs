@@ -48,6 +48,12 @@ public class StateManager : MonoBehaviour
         bm.GetComponent<BattleManager>().getOutcome();
     }
 
+    public void GoBack()
+    {
+        actionMenue.SetActive(false);
+        elementMenue.SetActive(true);
+    }
+
     public void animate(int playerElem, int playerAct, int enemyElem, int enemyAct)
     {
         elementMenue.SetActive(true);

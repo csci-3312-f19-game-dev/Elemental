@@ -81,6 +81,17 @@ public class BattleManager : MonoBehaviour
         playerCurrentAction = 3;
     }
 
+    public int getPlayerAmmo()
+    {
+        Debug.Log("Ammo: " + playerScript.ammo);
+        return playerScript.ammo; 
+    }
+
+    public int getPlayerShields()
+    {
+        return playerScript.shields;
+    }
+
     public void getOutcome()
     {
         int tempEDmgTaken = 0;

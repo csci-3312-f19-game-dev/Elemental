@@ -11,8 +11,8 @@ public class Enemy : MonoBehaviour
 
     void Start() {
         EnemyCombatant = gameObject.GetComponent<Combatant>();
-        EnemyCombatant.health = 3;
-        EnemyCombatant.elementLevels = new int[]{ 1, 0, 1, 0, 0 };
+        EnemyCombatant.health = 15;
+        EnemyCombatant.elementLevels = new int[]{ 1, 2, 1, 2, 4 };
         EnemyCombatant.ammo = 1;
         EnemyCombatant.shields = 1;
     }
@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
         return possibleElems[elementChoice];
     }
     public int getAction(){
+        if (EnemyCombatant.ammo > 2) return 0;
         int act =  Random.Range(0, 3);
         if(act == 0)
         {

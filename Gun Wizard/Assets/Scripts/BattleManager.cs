@@ -37,22 +37,31 @@ public class BattleManager : MonoBehaviour
     public void setPlayerFire()
     {
         playerCurrentElement = 0;
+        player.GetComponent<SpriteRenderer>().color = Color.red;
     }
     public void setPlayerEarth()
     {
         playerCurrentElement = 1;
+        player.GetComponent<SpriteRenderer>().color = Color.yellow;
+
     }
     public void setPlayerMetal()
     {
         playerCurrentElement = 2;
+        player.GetComponent<SpriteRenderer>().color = Color.gray;
+
     }
     public void setPlayerWater()
     {
         playerCurrentElement = 3;
+        player.GetComponent<SpriteRenderer>().color = Color.blue;
+
     }
     public void setPlayerPlant()
     {
         playerCurrentElement = 4;
+        player.GetComponent<SpriteRenderer>().color = Color.green;
+
     }
 
     public void setPlayerAttack()
@@ -78,6 +87,12 @@ public class BattleManager : MonoBehaviour
         int tempPDmgTaken = 0;
         enemyCurrentElement = enemyMethods.getElement();
         enemyCurrentAction = enemyMethods.getAction();
+        if (enemyCurrentElement == 0) enemy.GetComponent<SpriteRenderer>().color = Color.red;
+        if (enemyCurrentElement == 1) enemy.GetComponent<SpriteRenderer>().color = Color.yellow;
+        if (enemyCurrentElement == 2) enemy.GetComponent<SpriteRenderer>().color = Color.gray;
+        if (enemyCurrentElement == 3) enemy.GetComponent<SpriteRenderer>().color = Color.blue;
+        if (enemyCurrentElement == 4) enemy.GetComponent<SpriteRenderer>().color = Color.green;
+
         if (playerCurrentAction == 0) {
             tempEDmgTaken = playerScript.elementLevels[playerCurrentElement] * multiplier(playerCurrentElement, enemyCurrentElement);
             playerScript.ammo -= 1;

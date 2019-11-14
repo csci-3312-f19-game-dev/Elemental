@@ -11,8 +11,8 @@ public class Enemy : MonoBehaviour
 
     void Start() {
         EnemyCombatant = gameObject.GetComponent<Combatant>();
-        EnemyCombatant.health = 15;
-        EnemyCombatant.elementLevels = new int[]{ 1, 2, 1, 2, 4 };
+        EnemyCombatant.health = GlobalStats.enemy.health;
+        EnemyCombatant.elementLevels = GlobalStats.enemy.elementLevels;
         EnemyCombatant.ammo = 1;
         EnemyCombatant.shields = 1;
     }

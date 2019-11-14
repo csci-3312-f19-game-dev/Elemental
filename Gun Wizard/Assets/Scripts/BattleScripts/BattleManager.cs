@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class BattleManager : MonoBehaviour
 {
@@ -26,10 +28,11 @@ public class BattleManager : MonoBehaviour
         enemyScript = enemy.GetComponent<Combatant>();
         enemyMethods = enemy.GetComponent<Enemy>();
         sm = stateManager.GetComponent<StateManager>();
-        playerScript.health = 20;
-        playerScript.elementLevels = new int[] { 1, 1, 1, 1, 1 };
+        playerScript.health = GlobalStats.health;
+        playerScript.elementLevels = GlobalStats.elements;
         playerScript.ammo = 1;
         playerScript.shields = 1;
+
     }
 
     // Update is called once per frame
@@ -148,6 +151,11 @@ public class BattleManager : MonoBehaviour
 
         playerScript.health -= tempPDmgTaken;
         enemyScript.health -= tempEDmgTaken;
+        if(enemyScript.health < 1)
+        {
+            GlobalStats.health = playerScript.health;
+            SceneManager.LoadScene(sceneBuildIndex: GlobalStats.lastScene);
+        }
     }
 
     //returns what to multiply e1 by

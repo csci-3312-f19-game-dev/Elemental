@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("collide");
+        GlobalStats.enemy = other.gameObject.GetComponent<Combatant>();
+        GlobalStats.lastScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(sceneBuildIndex: 1);
     }
 }

@@ -11,9 +11,10 @@ public class StateManager : MonoBehaviour
     public GameObject enemy;
     private Button attackButton;
     private Button defendButton;
-    void Start()
+    void Awake()
     {
         elementMenue.SetActive(true);
+        Debug.Log("here");
         actionMenue.SetActive(false);
         attackButton = actionMenue.transform.Find("Attack").GetComponent<Button>();
         defendButton = actionMenue.transform.Find("Block").GetComponent<Button>();

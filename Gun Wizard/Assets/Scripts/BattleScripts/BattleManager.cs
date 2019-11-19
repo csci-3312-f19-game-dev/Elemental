@@ -154,7 +154,17 @@ public class BattleManager : MonoBehaviour
         if(enemyScript.health < 1)
         {
             GlobalStats.health = playerScript.health;
-            SceneManager.LoadScene(sceneBuildIndex: GlobalStats.lastScene);
+            GlobalStats.exp += enemyScript.exp;
+            ArrayList prevKilled = new ArrayList { };
+            foreach(int e in GlobalStats.killedEnemies)
+            {
+                prevKilled.Add(e);
+            }
+            prevKilled.Add(enemyScript.id);
+            Debug.Log("this should not be 0 :" +enemyScript.id);
+            GlobalStats.killedEnemies = prevKilled;
+            Debug.Log("was killed id :" + GlobalStats.killedEnemies[0]);
+            sm.returnToOverworld();
         }
     }
 
@@ -170,5 +180,4 @@ public class BattleManager : MonoBehaviour
         if ((((p + 2) % 5) == e) || (((p - 1) % 5) == e)) return 1;
         else return -1;
     }
-
 }

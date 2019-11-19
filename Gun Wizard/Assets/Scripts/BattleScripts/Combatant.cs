@@ -9,5 +9,7 @@ public class Combatant : MonoBehaviour
     public int[] elementLevels;
     public int ammo;
     public int shields;
+    public int exp;
+    public int id;
 
 }

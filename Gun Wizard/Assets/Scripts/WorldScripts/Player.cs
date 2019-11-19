@@ -23,8 +23,8 @@ public class Player : MonoBehaviour
         {
             GlobalStats.exp = GlobalStats.exp - GlobalStats.level * 5;
             GlobalStats.level++;
-            //
-            GlobalStats.elements[1] = GlobalStats.level;
+            //this automatical levels up fire - remove
+            GlobalStats.elements[0] = GlobalStats.level;
             //
             Debug.Log("Level Up! "+GlobalStats.level);
         }

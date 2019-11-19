@@ -6,7 +6,9 @@ public static class GlobalStats
 {
     public static int health, level, exp;
     public static int[] elements;
-    //player position
+    public static Vector3 playerPosition;
+    public static ArrayList killedEnemies = new ArrayList { };
+
 
     public static int lastScene;
 
@@ -14,4 +16,5 @@ public static class GlobalStats
 
     public static bool init = false;
 
+    public static bool justLoaded = false;
 }

@@ -19,13 +19,17 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         self.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, Input.GetAxis("Vertical") * moveSpeed);
+
     }
+    
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("collide");
         GlobalStats.enemy = other.gameObject.GetComponent<Combatant>();
         GlobalStats.lastScene = SceneManager.GetActiveScene().buildIndex;
+        GlobalStats.playerPosition = gameObject.transform.position;
+        //GlobalStats.killedEnemies.Add(other.gameObject.GetComponent<Combatant>().id);
         SceneManager.LoadScene(sceneBuildIndex: 1);
     }
 }

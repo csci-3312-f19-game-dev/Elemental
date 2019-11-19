@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class StateManager : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -60,6 +61,11 @@ public class StateManager : MonoBehaviour
         elementMenue.SetActive(true);
     }
 
+    public void returnToOverworld()
+    {
+        GlobalStats.justLoaded = true;
+        SceneManager.LoadScene(sceneBuildIndex: GlobalStats.lastScene);
+    }
 
     void Update()
     {

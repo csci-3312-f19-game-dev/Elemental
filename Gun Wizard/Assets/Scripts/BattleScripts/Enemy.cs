@@ -9,12 +9,15 @@ public class Enemy : MonoBehaviour
     private Combatant EnemyCombatant;
 
 
+
     void Start() {
         EnemyCombatant = gameObject.GetComponent<Combatant>();
-        EnemyCombatant.health = 15;
-        EnemyCombatant.elementLevels = new int[]{ 1, 2, 1, 2, 4 };
+        EnemyCombatant.health = GlobalStats.enemy.health;
+        EnemyCombatant.elementLevels = GlobalStats.enemy.elementLevels;
+        EnemyCombatant.exp = GlobalStats.enemy.exp;
         EnemyCombatant.ammo = 1;
         EnemyCombatant.shields = 1;
+        EnemyCombatant.id = GlobalStats.enemy.id;
     }
 
     public int getElement(){

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class BattleManager : MonoBehaviour
 {
@@ -26,10 +28,11 @@ public class BattleManager : MonoBehaviour
         enemyScript = enemy.GetComponent<Combatant>();
         enemyMethods = enemy.GetComponent<Enemy>();
         sm = stateManager.GetComponent<StateManager>();
-        playerScript.health = 20;
-        playerScript.elementLevels = new int[] { 1, 1, 1, 1, 1 };
+        playerScript.health = GlobalStats.health;
+        playerScript.elementLevels = GlobalStats.elements;
         playerScript.ammo = 1;
         playerScript.shields = 1;
+
     }
 
     // Update is called once per frame
@@ -148,6 +151,21 @@ public class BattleManager : MonoBehaviour
 
         playerScript.health -= tempPDmgTaken;
         enemyScript.health -= tempEDmgTaken;
+        if(enemyScript.health < 1)
+        {
+            GlobalStats.health = playerScript.health;
+            GlobalStats.exp += enemyScript.exp;
+            ArrayList prevKilled = new ArrayList { };
+            foreach(int e in GlobalStats.killedEnemies)
+            {
+                prevKilled.Add(e);
+            }
+            prevKilled.Add(enemyScript.id);
+            Debug.Log("this should not be 0 :" +enemyScript.id);
+            GlobalStats.killedEnemies = prevKilled;
+            Debug.Log("was killed id :" + GlobalStats.killedEnemies[0]);
+            sm.returnToOverworld();
+        }
     }
 
     //returns what to multiply e1 by
@@ -162,5 +180,4 @@ public class BattleManager : MonoBehaviour
         if ((((p + 2) % 5) == e) || (((p - 1) % 5) == e)) return 1;
         else return -1;
     }
-
 }

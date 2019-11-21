@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class StateManager : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -11,9 +12,10 @@ public class StateManager : MonoBehaviour
     public GameObject enemy;
     private Button attackButton;
     private Button defendButton;
-    void Start()
+    void Awake()
     {
         elementMenue.SetActive(true);
+        Debug.Log("here");
         actionMenue.SetActive(false);
         attackButton = actionMenue.transform.Find("Attack").GetComponent<Button>();
         defendButton = actionMenue.transform.Find("Block").GetComponent<Button>();
@@ -59,6 +61,11 @@ public class StateManager : MonoBehaviour
         elementMenue.SetActive(true);
     }
 
+    public void returnToOverworld()
+    {
+        GlobalStats.justLoaded = true;
+        SceneManager.LoadScene(sceneBuildIndex: GlobalStats.lastScene);
+    }
 
     void Update()
     {

@@ -10,11 +10,13 @@ public class BattleManager : MonoBehaviour
     public GameObject player;
     public GameObject enemy;
     public GameObject stateManager;
+    public GameObject enemyAnimator;
 
     private Combatant playerScript;
     private Combatant enemyScript;
     private Enemy enemyMethods;
     private StateManager sm;
+    private Animator enemyAnim;
 
     private int enemyCurrentElement;
     private int playerCurrentElement;
@@ -151,6 +153,8 @@ public class BattleManager : MonoBehaviour
 
         playerScript.health -= tempPDmgTaken;
         enemyScript.health -= tempEDmgTaken;
+
+
         if(enemyScript.health < 1)
         {
             GlobalStats.health = playerScript.health;

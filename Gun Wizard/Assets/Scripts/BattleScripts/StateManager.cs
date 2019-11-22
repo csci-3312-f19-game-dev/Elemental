@@ -10,8 +10,13 @@ public class StateManager : MonoBehaviour
     public GameObject actionMenue;
     public GameObject bm;
     public GameObject enemy;
+    public GameObject enemyAnimator;
+    public GameObject playerAnimator;
+    private Animator enemyAnim;
+    private Animator playerAnim;
     private Button attackButton;
     private Button defendButton;
+    
     void Awake()
     {
         elementMenue.SetActive(true);
@@ -19,6 +24,9 @@ public class StateManager : MonoBehaviour
         actionMenue.SetActive(false);
         attackButton = actionMenue.transform.Find("Attack").GetComponent<Button>();
         defendButton = actionMenue.transform.Find("Block").GetComponent<Button>();
+        enemyAnim = enemyAnimator.GetComponent<Animator>();
+        playerAnim = playerAnimator.GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -58,6 +66,24 @@ public class StateManager : MonoBehaviour
 
     public void animate(int playerElem, int playerAct, int enemyElem, int enemyAct)
     {
+        if (playerAct == 0)
+        {
+            if (playerElem == 0) enemyAnim.SetTrigger("FA");
+            if (playerElem == 1) enemyAnim.SetTrigger("EA");
+            if (playerElem == 2) enemyAnim.SetTrigger("MA");
+            if (playerElem == 3) enemyAnim.SetTrigger("WA");
+            if (playerElem == 4) enemyAnim.SetTrigger("PA");
+        }
+        if (enemyAct == 0)
+        {
+            if (enemyElem == 0) playerAnim.SetTrigger("FA");
+            if (enemyElem == 1) playerAnim.SetTrigger("EA");
+            if (enemyElem == 2) playerAnim.SetTrigger("MA");
+            if (enemyElem == 3) playerAnim.SetTrigger("WA");
+            if (enemyElem == 4) playerAnim.SetTrigger("PA");
+        }
+
+
         elementMenue.SetActive(true);
     }
 

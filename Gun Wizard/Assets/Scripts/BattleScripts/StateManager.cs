@@ -10,10 +10,13 @@ public class StateManager : MonoBehaviour
     public GameObject actionMenue;
     public GameObject bm;
     public GameObject enemy;
-    public GameObject enemyAnimator;
-    public GameObject playerAnimator;
-    private Animator enemyAnim;
-    private Animator playerAnim;
+    public GameObject playerAttackAnimator;
+    public GameObject enemyAttackAnimator;
+    public GameObject player;
+    private Animator enemyBodyAnim;
+    private Animator playerBodyAnim;
+    private Animator enemyAttackAnim;
+    private Animator playerAttackAnim;
     private Button attackButton;
     private Button defendButton;
     
@@ -24,8 +27,10 @@ public class StateManager : MonoBehaviour
         actionMenue.SetActive(false);
         attackButton = actionMenue.transform.Find("Attack").GetComponent<Button>();
         defendButton = actionMenue.transform.Find("Block").GetComponent<Button>();
-        enemyAnim = enemyAnimator.GetComponent<Animator>();
-        playerAnim = playerAnimator.GetComponent<Animator>();
+        enemyAttackAnim = enemyAttackAnimator.GetComponent<Animator>();
+        playerAttackAnim = playerAttackAnimator.GetComponent<Animator>();
+        enemyBodyAnim = enemy.GetComponent<Animator>();
+        playerBodyAnim = player.GetComponent<Animator>();
 
     }
 
@@ -66,21 +71,31 @@ public class StateManager : MonoBehaviour
 
     public void animate(int playerElem, int playerAct, int enemyElem, int enemyAct)
     {
+        if (playerAct == 0) playerBodyAnim.SetTrigger("Attack");
+        if (playerAct == 1) playerBodyAnim.SetTrigger("Reload");
+        if (playerAct == 2) playerBodyAnim.SetTrigger("Block");
+        if (playerAct == 3) playerBodyAnim.SetTrigger("Repair");
+
+        if (enemyAct == 0) enemyBodyAnim.SetTrigger("Attack");
+        if (enemyAct == 1) enemyBodyAnim.SetTrigger("Reload");
+        if (enemyAct == 2) enemyBodyAnim.SetTrigger("Block");
+        if (enemyAct == 3) enemyBodyAnim.SetTrigger("Repair");
+
         if (playerAct == 0)
         {
-            if (playerElem == 0) enemyAnim.SetTrigger("FA");
-            if (playerElem == 1) enemyAnim.SetTrigger("EA");
-            if (playerElem == 2) enemyAnim.SetTrigger("MA");
-            if (playerElem == 3) enemyAnim.SetTrigger("WA");
-            if (playerElem == 4) enemyAnim.SetTrigger("PA");
+            if (playerElem == 0) enemyAttackAnim.SetTrigger("FA");
+            if (playerElem == 1) enemyAttackAnim.SetTrigger("EA");
+            if (playerElem == 2) enemyAttackAnim.SetTrigger("MA");
+            if (playerElem == 3) enemyAttackAnim.SetTrigger("WA");
+            if (playerElem == 4) enemyAttackAnim.SetTrigger("PA");
         }
         if (enemyAct == 0)
         {
-            if (enemyElem == 0) playerAnim.SetTrigger("FA");
-            if (enemyElem == 1) playerAnim.SetTrigger("EA");
-            if (enemyElem == 2) playerAnim.SetTrigger("MA");
-            if (enemyElem == 3) playerAnim.SetTrigger("WA");
-            if (enemyElem == 4) playerAnim.SetTrigger("PA");
+            if (enemyElem == 0) playerAttackAnim.SetTrigger("FA");
+            if (enemyElem == 1) playerAttackAnim.SetTrigger("EA");
+            if (enemyElem == 2) playerAttackAnim.SetTrigger("MA");
+            if (enemyElem == 3) playerAttackAnim.SetTrigger("WA");
+            if (enemyElem == 4) playerAttackAnim.SetTrigger("PA");
         }
 
 

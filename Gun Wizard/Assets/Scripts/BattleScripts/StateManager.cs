@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
+
 public class StateManager : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -13,6 +15,10 @@ public class StateManager : MonoBehaviour
     public GameObject playerAttackAnimator;
     public GameObject enemyAttackAnimator;
     public GameObject player;
+    public GameObject enemyDamg;
+    public GameObject playerDamg;
+    private Animator enemyDmgAnim;
+    private Animator playerDmgAnim;
     private Animator enemyBodyAnim;
     private Animator playerBodyAnim;
     private Animator enemyAttackAnim;
@@ -31,6 +37,8 @@ public class StateManager : MonoBehaviour
         playerAttackAnim = playerAttackAnimator.GetComponent<Animator>();
         enemyBodyAnim = enemy.GetComponent<Animator>();
         playerBodyAnim = player.GetComponent<Animator>();
+        playerDmgAnim = playerDamg.GetComponent<Animator>();
+        enemyDmgAnim = enemyDamg.GetComponent<Animator>();
 
     }
 
@@ -69,17 +77,24 @@ public class StateManager : MonoBehaviour
         elementMenue.SetActive(true);
     }
 
-    public void animate(int playerElem, int playerAct, int enemyElem, int enemyAct)
+    public void animate(int playerElem, int playerAct, int playerDmg, int enemyElem, int enemyAct, int enemyDmg)
+    {
+        StartCoroutine(animateTimer(playerElem, playerAct, playerDmg, enemyElem, enemyAct, enemyDmg));
+    }
+
+    IEnumerator animateTimer(int playerElem, int playerAct, int playerDmg, int enemyElem, int enemyAct, int enemyDmg)
     {
         if (playerAct == 0) playerBodyAnim.SetTrigger("Attack");
-        if (playerAct == 1) playerBodyAnim.SetTrigger("Reload");
-        if (playerAct == 2) playerBodyAnim.SetTrigger("Block");
+        if (playerAct == 1) playerBodyAnim.SetTrigger("Block");
+        if (playerAct == 2) playerBodyAnim.SetTrigger("Reload");
         if (playerAct == 3) playerBodyAnim.SetTrigger("Repair");
 
         if (enemyAct == 0) enemyBodyAnim.SetTrigger("Attack");
-        if (enemyAct == 1) enemyBodyAnim.SetTrigger("Reload");
-        if (enemyAct == 2) enemyBodyAnim.SetTrigger("Block");
+        if (enemyAct == 1) enemyBodyAnim.SetTrigger("Block");
+        if (enemyAct == 2) enemyBodyAnim.SetTrigger("Reload");
         if (enemyAct == 3) enemyBodyAnim.SetTrigger("Repair");
+
+     //   yield return new WaitForSeconds(1);
 
         if (playerAct == 0)
         {
@@ -98,8 +113,17 @@ public class StateManager : MonoBehaviour
             if (enemyElem == 4) playerAttackAnim.SetTrigger("PA");
         }
 
+        yield return new WaitForSeconds(1.5f);
+
+        playerDamg.GetComponent<TextMeshProUGUI>().text = "-" + playerDmg;
+        enemyDamg.GetComponent<TextMeshProUGUI>().text = "-" + enemyDmg;
+        playerDmgAnim.SetTrigger("trig");
+        enemyDmgAnim.SetTrigger("trig");
+
+        yield return new WaitForSeconds(2);
 
         elementMenue.SetActive(true);
+   
     }
 
     public void returnToOverworld()

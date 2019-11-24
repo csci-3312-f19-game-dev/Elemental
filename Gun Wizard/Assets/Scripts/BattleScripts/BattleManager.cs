@@ -149,7 +149,7 @@ public class BattleManager : MonoBehaviour
             enemyScript.shields += 1;
         }
 
-        sm.animate(playerCurrentElement,playerCurrentAction,enemyCurrentElement,enemyCurrentAction);
+        sm.animate(playerCurrentElement, playerCurrentAction, tempPDmgTaken,enemyCurrentElement, enemyCurrentAction, tempEDmgTaken);
 
         playerScript.health -= tempPDmgTaken;
         enemyScript.health -= tempEDmgTaken;

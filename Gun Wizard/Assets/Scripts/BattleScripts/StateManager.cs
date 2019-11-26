@@ -17,10 +17,6 @@ public class StateManager : MonoBehaviour
     public GameObject player;
     public GameObject enemyDamg;
     public GameObject playerDamg;
-    public GameObject playerBullet;
-    public GameObject enemyBullet;
-    private Animator playerBulletAnim;
-    private Animator enemyBulletAnim;
     private Animator enemyDmgAnim;
     private Animator playerDmgAnim;
     private Animator enemyBodyAnim;
@@ -43,8 +39,6 @@ public class StateManager : MonoBehaviour
         playerBodyAnim = player.GetComponent<Animator>();
         playerDmgAnim = playerDamg.GetComponent<Animator>();
         enemyDmgAnim = enemyDamg.GetComponent<Animator>();
-        playerBulletAnim = playerBullet.GetComponent<Animator>();
-        enemyBulletAnim = enemyBullet.GetComponent<Animator>();
 
     }
 
@@ -104,7 +98,6 @@ public class StateManager : MonoBehaviour
 
         if (playerAct == 0)
         {
-            playerBulletAnim.SetTrigger("shoot");
             if (playerElem == 0) enemyAttackAnim.SetTrigger("FA");
             if (playerElem == 1) enemyAttackAnim.SetTrigger("EA");
             if (playerElem == 2) enemyAttackAnim.SetTrigger("MA");
@@ -113,8 +106,6 @@ public class StateManager : MonoBehaviour
         }
         if (enemyAct == 0)
         {
-            enemyBulletAnim.SetTrigger("shoot");
-            Debug.Log("woops");
             if (enemyElem == 0) playerAttackAnim.SetTrigger("FA");
             if (enemyElem == 1) playerAttackAnim.SetTrigger("EA");
             if (enemyElem == 2) playerAttackAnim.SetTrigger("MA");

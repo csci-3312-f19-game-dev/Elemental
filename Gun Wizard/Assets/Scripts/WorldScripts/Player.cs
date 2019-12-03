@@ -14,6 +14,9 @@ public class Player : MonoBehaviour
             GlobalStats.health = 20;
             GlobalStats.elements = new int[] { 1, 1, 1, 1, 1 };
             GlobalStats.init = true;
+            GlobalStats.perkPoints = 0;
+            GlobalStats.exp = 0;
+            GlobalStats.level = 1;
         }
     }
 
@@ -24,8 +27,9 @@ public class Player : MonoBehaviour
             GlobalStats.exp = GlobalStats.exp - GlobalStats.level * 5;
             GlobalStats.level++;
             //this automatical levels up fire - remove
-            GlobalStats.elements[0] = GlobalStats.level;
+            //GlobalStats.elements[0] = GlobalStats.level;
             //
+            GlobalStats.perkPoints++;
             Debug.Log("Level Up! "+GlobalStats.level);
         }
     }

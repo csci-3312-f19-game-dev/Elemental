@@ -103,7 +103,7 @@ public class StateManager : MonoBehaviour
         if (enemyAct == 2) enemyBodyAnim.SetTrigger("Reload");
         if (enemyAct == 3) enemyBodyAnim.SetTrigger("Repair");
 
-     //   yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.5f);
 
         if (playerAct == 0)
         {
@@ -132,7 +132,8 @@ public class StateManager : MonoBehaviour
         yield return new WaitForSeconds(2);
 
         elementMenue.SetActive(true);
-   
+
+
     }
 
     public void returnToOverworld()

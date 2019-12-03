@@ -1,49 +1,67 @@
 fileFormatVersion: 2
-guid: 53fb23e2abea89b4d9228a0c072ae43c
+guid: b3e2ccd9c4e8a284a844b3ca137d78c9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3063912200193529332
-    second: Goon Block_0
+      213: -2306298625962805975
+    second: Goon Attack (1)_0
   - first:
-      213: -8786152069722505767
-    second: Goon Block_1
+      213: 2046002921187322234
+    second: Goon Attack (1)_1
   - first:
-      213: -5858610700802440852
-    second: Goon Block_2
+      213: -8428717336334809072
+    second: Goon Attack (1)_2
   - first:
-      213: -1539608124620007988
-    second: Goon Block_3
+      213: 2036316964314445548
+    second: Goon Attack (1)_3
   - first:
-      213: -4865923218797193842
-    second: Goon Block_4
+      213: 4750998595386828774
+    second: Goon Attack (1)_4
   - first:
-      213: 7520131127670974307
-    second: Goon Block_5
+      213: 1484331922253692582
+    second: Goon Attack (1)_5
   - first:
-      213: -9188028664762995658
-    second: Goon Block_6
+      213: 7763914696796453522
+    second: Goon Attack (1)_6
   - first:
-      213: 8218067673901982378
-    second: Goon Block_7
+      213: -1145753292256541933
+    second: Goon Attack (1)_7
   - first:
-      213: -1679687656118785021
-    second: Goon Block_8
+      213: 295108682253571624
+    second: Goon Attack (1)_8
   - first:
-      213: -3712396386614877337
-    second: Goon Block_9
+      213: -6811824360128070437
+    second: Goon Attack (1)_9
   - first:
-      213: 8164224081615547338
-    second: Goon Block_10
+      213: -5022707015097136178
+    second: Goon Attack (1)_10
   - first:
-      213: -8794994785799403075
-    second: Goon Block_11
+      213: -4079601438771062856
+    second: Goon Attack (1)_11
   - first:
-      213: 8684471463534523241
-    second: Goon Block_12
+      213: -2726889670830067393
+    second: Goon Attack (1)_12
   - first:
-      213: -1150346372354762506
-    second: Goon Block_13
+      213: -5399951229454637198
+    second: Goon Attack (1)_13
+  - first:
+      213: -8206487626019099885
+    second: Goon Attack (1)_14
+  - first:
+      213: -3149829646342981259
+    second: Goon Attack (1)_15
+  - first:
+      213: 1834557564307873891
+    second: Goon Attack (1)_16
+  - first:
+      213: 7778376088218437822
+    second: Goon Attack (1)_17
+  - first:
+      213: 9214694894477371990
+    second: Goon Attack (1)_18
+  - first:
+      213: 3393971456199766428
+    second: Goon Attack (1)_19
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -87,7 +105,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 2048
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -140,13 +158,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Goon Block_0
+      name: Goon Attack (1)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
-        width: 32
-        height: 32
+        y: 4096
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5f1c6a19e4ba9e4a879b75076b3f0bc
-      internalID: 3063912200193529332
+      spriteID: 9012ea5e5e1ac0649bd6abf06b052b62
+      internalID: -2306298625962805975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goon Block_1
+      name: Goon Attack (1)_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
+        x: 1024
+        y: 4096
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b8048eec72324741a2fed631ae66dd3
-      internalID: -8786152069722505767
+      spriteID: 7ec167aabf657a84db86a2f7dc297e60
+      internalID: 2046002921187322234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goon Block_2
+      name: Goon Attack (1)_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
+        x: 2048
+        y: 4096
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80646cbd0faf62e429df994ee84ba91d
-      internalID: -5858610700802440852
+      spriteID: b4f177971dddc5145b0fd4b21c7ffb89
+      internalID: -8428717336334809072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goon Block_3
+      name: Goon Attack (1)_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 96
-        width: 32
-        height: 32
+        x: 3072
+        y: 4096
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,104 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 753e8ef9f1523f24a81ff0836c1db834
-      internalID: -1539608124620007988
+      spriteID: dbab20d9403b7784ba4e53640b4e78ce
+      internalID: 2036316964314445548
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goon Block_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2aadb12f486a3bf4888fc9140d21ca89
-      internalID: -4865923218797193842
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goon Block_5
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be72acd1c57678f4c8cc0eb52dc509f9
-      internalID: 7520131127670974307
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goon Block_6
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e8809d04b9291974d909805dfaabd761
-      internalID: -9188028664762995658
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goon Block_7
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c5d9e980cedbdab43ac75761e6c2628a
-      internalID: 8218067673901982378
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goon Block_8
+      name: Goon Attack (1)_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
+        y: 3072
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,20 +256,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df1bcf9fcaa533e40a4bb4142b621baa
-      internalID: -1679687656118785021
+      spriteID: 53eabb80fc3d7e6499ca331a50a529df
+      internalID: 4750998595386828774
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goon Block_9
+      name: Goon Attack (1)_5
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 1024
+        y: 3072
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,20 +277,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adbe6b2bd3916a240b119a89ba054125
-      internalID: -3712396386614877337
+      spriteID: c106c29e3a1590d4590f94ed6081a864
+      internalID: 1484331922253692582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goon Block_10
+      name: Goon Attack (1)_6
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
+        x: 2048
+        y: 3072
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -364,20 +298,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72442fc872a72934685f181952ae63d5
-      internalID: 8164224081615547338
+      spriteID: d1669ba3df71ba343a9105636741871b
+      internalID: 7763914696796453522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goon Block_11
+      name: Goon Attack (1)_7
       rect:
         serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
+        x: 3072
+        y: 3072
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -385,20 +319,188 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a30594f5bb4594418eeb66e91a15416
-      internalID: -8794994785799403075
+      spriteID: 00d155e7938737543b99b9f59063e8dc
+      internalID: -1145753292256541933
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goon Block_12
+      name: Goon Attack (1)_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd990829ea686fd488fae4e88f527046
+      internalID: 295108682253571624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goon Attack (1)_9
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fbbfef8b524d224492dc76c18687035
+      internalID: -6811824360128070437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goon Attack (1)_10
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 666370d4080f39f4b809cb7036df5773
+      internalID: -5022707015097136178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goon Attack (1)_11
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa14d43a1ad64de4083acb80b38c91e4
+      internalID: -4079601438771062856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goon Attack (1)_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5226f9cf85c69c54d995c494f19e4c83
+      internalID: -2726889670830067393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goon Attack (1)_13
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bba32f76856aec4f903a8bce8389ec5
+      internalID: -5399951229454637198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goon Attack (1)_14
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de67c2bc02b07c41b9d49b3b6d90b41
+      internalID: -8206487626019099885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goon Attack (1)_15
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2b908569397d04282e4b91dc499230
+      internalID: -3149829646342981259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goon Attack (1)_16
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -406,20 +508,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72ae2fc6960f3774c93d46e0f5fe7a4d
-      internalID: 8684471463534523241
+      spriteID: 83ebb42a0a3c7014bb1b7261f59f7bdf
+      internalID: 1834557564307873891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goon Block_13
+      name: Goon Attack (1)_17
       rect:
         serializedVersion: 2
-        x: 32
+        x: 1024
         y: 0
-        width: 32
-        height: 32
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -427,8 +529,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29cf0567e04abc84a9e1e0ef9719fbb0
-      internalID: -1150346372354762506
+      spriteID: 7b374c8fb385ac34788952e604a1d426
+      internalID: 7778376088218437822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goon Attack (1)_18
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51feecbdf980009448fb4e35c396c865
+      internalID: 9214694894477371990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goon Attack (1)_19
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6e4d3e92c80124eb05d5a271d91dbe
+      internalID: 3393971456199766428
       vertices: []
       indices: 
       edges: []

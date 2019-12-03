@@ -14,6 +14,8 @@ public static class GlobalStats
 
     public static Combatant enemy;
 
+    public static int enemyID;
+
     public static bool init = false;
 
     public static bool justLoaded = false;

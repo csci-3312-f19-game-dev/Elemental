@@ -8,7 +8,7 @@ public class OverworldManager : MonoBehaviour
     public GameObject[] enemies;
     void Start()
     {
-        enemies = GameObject.FindGameObjectsWithTag("enemy");
+        enemies = GameObject.FindGameObjectsWithTag("goon");
         foreach (GameObject e in enemies)
         {
             Debug.Log("looking for id :" + e.GetComponent<Combatant>().id);

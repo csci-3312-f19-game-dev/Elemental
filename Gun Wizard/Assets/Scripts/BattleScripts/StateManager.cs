@@ -40,6 +40,14 @@ public class StateManager : MonoBehaviour
         playerBodyAnim = player.GetComponent<Animator>();
         playerDmgAnim = playerDamg.GetComponent<Animator>();
         enemyDmgAnim = enemyDamg.GetComponent<Animator>();
+        if(GlobalStats.enemyID == 10)
+        {
+            enemyBodyAnim.SetTrigger("boss");
+        }
+        else
+        {
+            enemyBodyAnim.SetTrigger("goon");
+        }
 
     }
 

@@ -10,11 +10,13 @@ public class BattleManager : MonoBehaviour
     public GameObject player;
     public GameObject enemy;
     public GameObject stateManager;
+    public GameObject enemyAnimator;
 
     private Combatant playerScript;
     private Combatant enemyScript;
     private Enemy enemyMethods;
     private StateManager sm;
+    private Animator enemyAnim;
 
     private int enemyCurrentElement;
     private int playerCurrentElement;
@@ -147,10 +149,12 @@ public class BattleManager : MonoBehaviour
             enemyScript.shields += 1;
         }
 
-        sm.animate(playerCurrentElement,playerCurrentAction,enemyCurrentElement,enemyCurrentAction);
+        sm.animate(playerCurrentElement, playerCurrentAction, tempPDmgTaken,enemyCurrentElement, enemyCurrentAction, tempEDmgTaken);
 
         playerScript.health -= tempPDmgTaken;
         enemyScript.health -= tempEDmgTaken;
+
+
         if(enemyScript.health < 1)
         {
             GlobalStats.health = playerScript.health;

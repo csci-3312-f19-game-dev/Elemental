@@ -30,6 +30,6 @@ public class PlayerMovement : MonoBehaviour
         GlobalStats.lastScene = SceneManager.GetActiveScene().buildIndex;
         GlobalStats.playerPosition = gameObject.transform.position;
         //GlobalStats.killedEnemies.Add(other.gameObject.GetComponent<Combatant>().id);
-        SceneManager.LoadScene(sceneBuildIndex: 1);
+        SceneManager.LoadScene(sceneBuildIndex: 3);
     }
 }

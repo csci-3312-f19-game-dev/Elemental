@@ -2375,7 +2375,6 @@ GameObject:
   - component: {fileID: 1022103861}
   - component: {fileID: 1022103860}
   - component: {fileID: 1022103859}
-  - component: {fileID: 1022103858}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2403,27 +2402,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1022103858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022103856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfcb3c4fc2c60bd47ad0040aef21fbb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  elementMenue: {fileID: 0}
-  actionMenue: {fileID: 0}
-  bm: {fileID: 0}
-  enemy: {fileID: 0}
-  playerAttackAnimator: {fileID: 0}
-  enemyAttackAnimator: {fileID: 0}
-  player: {fileID: 0}
-  enemyDamg: {fileID: 0}
-  playerDamg: {fileID: 0}
 --- !u!114 &1022103859
 MonoBehaviour:
   m_ObjectHideFlags: 0

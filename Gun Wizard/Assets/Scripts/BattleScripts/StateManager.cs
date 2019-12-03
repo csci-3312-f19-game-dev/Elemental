@@ -25,7 +25,7 @@ public class StateManager : MonoBehaviour
     private Animator playerAttackAnim;
     private Button attackButton;
     private Button defendButton;
-    
+    private Button backButton;
     void Awake()
     {
         elementMenue.SetActive(true);
@@ -33,6 +33,7 @@ public class StateManager : MonoBehaviour
         actionMenue.SetActive(false);
         attackButton = actionMenue.transform.Find("Attack").GetComponent<Button>();
         defendButton = actionMenue.transform.Find("Block").GetComponent<Button>();
+        backButton = actionMenue.transform.Find("Button").GetComponent<Button>();
         enemyAttackAnim = enemyAttackAnimator.GetComponent<Animator>();
         playerAttackAnim = playerAttackAnimator.GetComponent<Animator>();
         enemyBodyAnim = enemy.GetComponent<Animator>();

@@ -10,6 +10,6 @@ public class Combatant : MonoBehaviour
     public int ammo;
     public int shields;
     public int exp;
-    public int id;
+    public int id; //player-0, goon-1, mid-3, boss-5
 
 }

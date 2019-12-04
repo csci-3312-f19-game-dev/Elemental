@@ -8,7 +8,8 @@ public static class GlobalStats
     public static int[] elements;
     public static Vector3 playerPosition;
     public static ArrayList killedEnemies = new ArrayList { };
-
+    public static int perkPoints;
+    public static int score;
 
     public static int lastScene;
 
@@ -20,5 +21,4 @@ public static class GlobalStats
 
     public static bool justLoaded = false;
 
-    public static int perkPoints;
 }

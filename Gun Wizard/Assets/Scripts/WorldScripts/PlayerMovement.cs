@@ -54,14 +54,8 @@ public class PlayerMovement : MonoBehaviour
         GlobalStats.enemy = other.gameObject.GetComponent<Combatant>();
         GlobalStats.lastScene = SceneManager.GetActiveScene().buildIndex;
         GlobalStats.playerPosition = gameObject.transform.position;
-        if(other.gameObject.tag == "boss")
-        {
-            GlobalStats.enemyID = 10;
-        }
-        else
-        {
-            GlobalStats.enemyID = 1;
-        }
+        GlobalStats.enemyID = other.gameObject.GetComponent<Combatant>().id;
+     
         //GlobalStats.killedEnemies.Add(other.gameObject.GetComponent<Combatant>().id);
         SceneManager.LoadScene(sceneBuildIndex: 3);
     }

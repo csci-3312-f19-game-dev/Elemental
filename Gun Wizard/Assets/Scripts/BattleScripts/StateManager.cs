@@ -40,12 +40,13 @@ public class StateManager : MonoBehaviour
         playerBodyAnim = player.GetComponent<Animator>();
         playerDmgAnim = playerDamg.GetComponent<Animator>();
         enemyDmgAnim = enemyDamg.GetComponent<Animator>();
-        if(GlobalStats.enemyID == 10)
+        if(GlobalStats.enemyID == 5)
         {
             enemyBodyAnim.SetTrigger("boss");
         }
         else
         {
+            Debug.Log("ID :"+GlobalStats.enemyID);
             enemyBodyAnim.SetTrigger("goon");
         }
 
@@ -138,8 +139,26 @@ public class StateManager : MonoBehaviour
 
     public void returnToOverworld()
     {
+        StartCoroutine(sceneDelay(GlobalStats.lastScene));
+    }
+
+    public void playerDeath()
+    {
+        StartCoroutine(sceneDelay(4));
+    }
+
+    public void playerWin(int health)
+    {
+        GlobalStats.score = GlobalStats.score * health;
+        StartCoroutine(sceneDelay(4));
+    }
+
+    IEnumerator sceneDelay(int scene)
+    {
+        yield return new WaitForSeconds(5f);
+        //Debug.Log("return");
         GlobalStats.justLoaded = true;
-        SceneManager.LoadScene(sceneBuildIndex: GlobalStats.lastScene);
+        SceneManager.LoadScene(sceneBuildIndex: scene);
     }
 
     void Update()

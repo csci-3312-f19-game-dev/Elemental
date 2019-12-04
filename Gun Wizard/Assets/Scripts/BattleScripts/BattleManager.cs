@@ -159,6 +159,7 @@ public class BattleManager : MonoBehaviour
         {
             GlobalStats.health = playerScript.health;
             GlobalStats.exp += enemyScript.exp;
+            GlobalStats.score += enemyScript.id;
             ArrayList prevKilled = new ArrayList { };
             foreach(int e in GlobalStats.killedEnemies)
             {
@@ -168,7 +169,19 @@ public class BattleManager : MonoBehaviour
             Debug.Log("this should not be 0 :" +enemyScript.id);
             GlobalStats.killedEnemies = prevKilled;
             Debug.Log("was killed id :" + GlobalStats.killedEnemies[0]);
-            sm.returnToOverworld();
+
+            if(enemyScript.id != 5)
+            {
+                sm.returnToOverworld();
+            }
+            else
+            {
+                sm.playerWin(playerScript.health);
+            }
+        }
+        if(playerScript.health < 1)
+        {
+            sm.playerDeath();
         }
     }
 

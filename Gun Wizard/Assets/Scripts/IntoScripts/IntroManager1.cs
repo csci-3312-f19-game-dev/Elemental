@@ -45,7 +45,7 @@ public class IntroManager1 : MonoBehaviour
         }
         if(frame == 2)
         {
-            text.text = "In combat you have 3 stats; Health, Ammo, and Sheilds";
+            text.text = "In combat you have 3 stats; Health, Ammo, and Shields";
             frame = 3;
             return;
         }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1491665517172575340}
   m_Layer: 8
   m_Name: Boss
-  m_TagString: enemy
+  m_TagString: boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
   ammo: 1
   shields: 1
   exp: 15
-  id: 1
+  id: 10
 --- !u!114 &1491665517172575340
 MonoBehaviour:
   m_ObjectHideFlags: 0

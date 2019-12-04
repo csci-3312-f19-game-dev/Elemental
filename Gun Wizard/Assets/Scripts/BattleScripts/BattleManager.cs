@@ -178,10 +178,10 @@ public class BattleManager : MonoBehaviour
         else return 1;
     }
 
-    //returns -1 if enemy beats player, 0 if they're the same, and 1 if player beats enemy
-    private int elementCompare(int p, int e) {
-        if (p == e) return 0;
-        if ((((p + 2) % 5) == e) || (((p - 1) % 5) == e)) return 1;
+    //returns -1 if e2 beats e1, 0 if they're the same, and 1 if e1 beats e2
+    private int elementCompare(int e1, int e2) {
+        if (e1 == e2) return 0;
+        if ((((e1 + 2) % 5) == e2) || (((e1 + 4) % 5) == e2)) return 1;
         else return -1;
     }
 }

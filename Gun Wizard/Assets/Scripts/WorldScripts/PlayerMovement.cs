@@ -15,36 +15,17 @@ public class PlayerMovement : MonoBehaviour
     {
         self = gameObject.GetComponent<Rigidbody2D>();
         playerAnim = gameObject.GetComponent<Animator>();
-        playerAnim.SetTrigger("down");
+        playerAnim.SetFloat("Vertical", -1f);
+        playerAnim.SetFloat("Horizontal", 0f);
     }
 
     // Update is called once per frame
     void Update()
     {
         self.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, Input.GetAxis("Vertical") * moveSpeed);
-        float velx = self.velocity.x;
-        float vely = self.velocity.y;
-
-
-        if (Input.GetAxis("Vertical") < 0)
-        {
-            playerAnim.SetTrigger("down");
-        }
-        if (Input.GetAxis("Horizontal") > 0)
-        {
-            playerAnim.SetTrigger("right");
-        }
-        if (Input.GetAxis("Horizontal") < 0)
-        {
-            playerAnim.SetTrigger("left");
-        }
-        if (Input.GetAxis("Vertical") > 0)
-        {
-            playerAnim.SetTrigger("up");
-        }
-
-
-
+        
+        playerAnim.SetFloat("Vertical", Input.GetAxis("Vertical"));
+        playerAnim.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
     }
     
 

@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class MenueManager : MonoBehaviour
 {
     public GameObject elementMenue;
     public SimpleHealthBar healthBar;
     private bool inventoryOpen;
     // Start is called before the first frame update
+    public TextMeshProUGUI levelText;
     void Start()
     {
         elementMenue.SetActive(false);
         inventoryOpen = false;
+        levelText.text = "Current Level: " + GlobalStats.level;
     }
 
     public void inventoryButton()

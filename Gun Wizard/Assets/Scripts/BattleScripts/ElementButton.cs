@@ -5,12 +5,10 @@ using UnityEngine.UI;
 public class ElementButton : MonoBehaviour
 {
     // Start is called before the first frame update
-    private GameObject arrow1;
-    private GameObject arrow2;
+    public GameObject arrow1;
+    public GameObject arrow2;
     void Start()
     {
-        arrow1 = transform.Find("Arrow1").gameObject;
-        arrow2 = transform.Find("Arrow2").gameObject;
         arrow1.SetActive(false);
         arrow2.SetActive(false);
         

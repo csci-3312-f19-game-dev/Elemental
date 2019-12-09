@@ -76,15 +76,7 @@ public class MenueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        updateElement();
+        elementMenue.transform.GetChild(0).GetChild(1).GetComponent<Text>().text = GlobalStats.elements[0].ToString();
         healthBar.UpdateBar(GlobalStats.health, 20);
-    }
-
-    private void updateElement()
-    {
-        for (int i = 0; i < 5; i++)
-        {
-            elementMenue.transform.GetChild(i).GetChild(0).GetComponent<Text>().text = GlobalStats.elements[i].ToString();
-        }
     }
 }

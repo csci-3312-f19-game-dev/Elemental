@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class MenueManager : MonoBehaviour
 {
     public GameObject elementMenue;
     public SimpleHealthBar healthBar;
     private bool inventoryOpen;
+    public TextMeshProUGUI LevelText;
+    public TextMeshProUGUI XPText;
     // Start is called before the first frame update
     void Start()
     {
@@ -76,6 +78,8 @@ public class MenueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        LevelText.SetText("Current Level: " + GlobalStats.level);
+        XPText.SetText("XP Needed to Level Up: " + (GlobalStats.level * 5-GlobalStats.exp) + "/" + (GlobalStats.level*5));
         updateElement();
         healthBar.UpdateBar(GlobalStats.health, 20);
     }

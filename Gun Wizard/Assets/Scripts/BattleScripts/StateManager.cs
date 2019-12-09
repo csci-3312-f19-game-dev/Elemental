@@ -44,9 +44,12 @@ public class StateManager : MonoBehaviour
         {
             enemyBodyAnim.SetTrigger("boss");
         }
+        else if(GlobalStats.enemyID == 3)
+        {
+            enemyBodyAnim.SetTrigger("mid");
+        }
         else
         {
-            Debug.Log("ID :"+GlobalStats.enemyID);
             enemyBodyAnim.SetTrigger("goon");
         }
 

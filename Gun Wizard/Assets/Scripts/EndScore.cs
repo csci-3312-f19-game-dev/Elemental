@@ -12,7 +12,7 @@ public class EndScore : MonoBehaviour
     void Start()
     {
         score = scoreObj.GetComponent<TextMeshProUGUI>();
-        score.text = "Score; " + GlobalStats.score;
+        score.text = "Score: " + GlobalStats.score;
     }
 
     // Update is called once per frame

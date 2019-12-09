@@ -83,7 +83,7 @@ public class IntroManager1 : MonoBehaviour
         }
         if (frame == 8)
         {
-            text.text = "Your final score is; Remaining Health * Points from defeating enemies. Play smart and conserve health to get a high score!";
+            text.text = "Your final score is: Remaining Health * Points from defeating enemies. Play smart and conserve health to get a high score!";
             frame = 9;
             return;
         }

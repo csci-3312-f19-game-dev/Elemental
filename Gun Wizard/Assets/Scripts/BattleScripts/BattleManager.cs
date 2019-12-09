@@ -47,7 +47,7 @@ public class BattleManager : MonoBehaviour
     public void setPlayerEarth()
     {
         playerCurrentElement = 1;
-        player.GetComponent<SpriteRenderer>().color = new Color(0.8f, .6f, .1f,1);
+        player.GetComponent<SpriteRenderer>().color = Color.yellow;
 
     }
     public void setPlayerMetal()
@@ -104,7 +104,7 @@ public class BattleManager : MonoBehaviour
         enemyCurrentElement = enemyMethods.getElement();
         enemyCurrentAction = enemyMethods.getAction();
         if (enemyCurrentElement == 0) enemy.GetComponent<SpriteRenderer>().color = Color.red;
-        if (enemyCurrentElement == 1) enemy.GetComponent<SpriteRenderer>().color = new Color(0.8f, .6f, .1f,1); ;
+        if (enemyCurrentElement == 1) enemy.GetComponent<SpriteRenderer>().color = Color.yellow;
         if (enemyCurrentElement == 2) enemy.GetComponent<SpriteRenderer>().color = Color.gray;
         if (enemyCurrentElement == 3) enemy.GetComponent<SpriteRenderer>().color = Color.blue;
         if (enemyCurrentElement == 4) enemy.GetComponent<SpriteRenderer>().color = Color.green;

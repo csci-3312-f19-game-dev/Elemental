@@ -52,16 +52,17 @@ public class IntroManager1 : MonoBehaviour
         if(frame == 3)
         {
             elementMenue.SetActive(true);
-            text.text = "Combat has 2 rounds. First you pick your element";
+            text.text = "Combat has 2 rounds. First you pick your element, then you pick your action";
             frame = 4;
             return;
         }
-        if (frame == 4)
+        if(frame == 4)
         {
             text.text = "Each element is super effective againts 2 others, and weak agains the remaining 2";
             frame = 5;
             return;
         }
+<<<<<<< HEAD
         if (frame == 5)
         {
             text.text = "Next you choose your action";
@@ -88,13 +89,16 @@ public class IntroManager1 : MonoBehaviour
             return;
         }
         if (frame == 9)
+=======
+        if(frame == 5)
+>>>>>>> dc8f36f264e283929743ed07ad515e5fc03d430a
         {
             text.text = "Good Luck.";
             continueButton.GetComponentInChildren<TextMeshProUGUI>().text = "Begin Adventure";
-            frame = 10;
+            frame = 6;
             return;
         }
-        if(frame == 10)
+        if(frame == 6)
         {
             SceneManager.LoadScene(2);
         }

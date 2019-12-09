@@ -19,6 +19,8 @@ public class UIManager : MonoBehaviour
     private Combatant playerScript;
     private Combatant enemyScript;
 
+    public SimpleHealthBar playerHealthBar;
+    public SimpleHealthBar enemyHealthBar;
 
     void Start()
     {
@@ -35,6 +37,8 @@ public class UIManager : MonoBehaviour
         enemyAmmo.GetComponent<Text>().text = "Ammo: " + enemyScript.ammo;
         playerShields.GetComponent<Text>().text = "Shields: " + playerScript.shields;
         enemyShields.GetComponent<Text>().text = "Shields: " + enemyScript.shields;
+        playerHealthBar.UpdateBar(playerScript.health, 20);
+        enemyHealthBar.UpdateBar(enemyScript.health, GlobalStats.enemy.health);
 
     }
 }

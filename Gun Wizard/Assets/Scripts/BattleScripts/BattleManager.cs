@@ -47,7 +47,7 @@ public class BattleManager : MonoBehaviour
     public void setPlayerEarth()
     {
         playerCurrentElement = 1;
-        player.GetComponent<SpriteRenderer>().color = Color.yellow;
+        player.GetComponent<SpriteRenderer>().color = new Color(0.8f, .6f, .1f,1);
 
     }
     public void setPlayerMetal()
@@ -104,7 +104,7 @@ public class BattleManager : MonoBehaviour
         enemyCurrentElement = enemyMethods.getElement();
         enemyCurrentAction = enemyMethods.getAction();
         if (enemyCurrentElement == 0) enemy.GetComponent<SpriteRenderer>().color = Color.red;
-        if (enemyCurrentElement == 1) enemy.GetComponent<SpriteRenderer>().color = Color.yellow;
+        if (enemyCurrentElement == 1) enemy.GetComponent<SpriteRenderer>().color = new Color(0.8f, .6f, .1f,1); ;
         if (enemyCurrentElement == 2) enemy.GetComponent<SpriteRenderer>().color = Color.gray;
         if (enemyCurrentElement == 3) enemy.GetComponent<SpriteRenderer>().color = Color.blue;
         if (enemyCurrentElement == 4) enemy.GetComponent<SpriteRenderer>().color = Color.green;
@@ -159,6 +159,7 @@ public class BattleManager : MonoBehaviour
         {
             GlobalStats.health = playerScript.health;
             GlobalStats.exp += enemyScript.exp;
+            GlobalStats.score += enemyScript.id;
             ArrayList prevKilled = new ArrayList { };
             foreach(int e in GlobalStats.killedEnemies)
             {
@@ -168,7 +169,19 @@ public class BattleManager : MonoBehaviour
             Debug.Log("this should not be 0 :" +enemyScript.id);
             GlobalStats.killedEnemies = prevKilled;
             Debug.Log("was killed id :" + GlobalStats.killedEnemies[0]);
-            sm.returnToOverworld();
+
+            if(enemyScript.id != 5)
+            {
+                sm.returnToOverworld();
+            }
+            else
+            {
+                sm.playerWin(playerScript.health);
+            }
+        }
+        if(playerScript.health < 1)
+        {
+            sm.playerDeath();
         }
     }
 

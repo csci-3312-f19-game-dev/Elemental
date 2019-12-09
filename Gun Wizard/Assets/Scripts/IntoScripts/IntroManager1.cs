@@ -52,24 +52,49 @@ public class IntroManager1 : MonoBehaviour
         if(frame == 3)
         {
             elementMenue.SetActive(true);
-            text.text = "Combat has 2 rounds. First you pick your element, then you pick your action";
+            text.text = "Combat has 2 rounds. First you pick your element";
             frame = 4;
             return;
         }
-        if(frame == 4)
+        if (frame == 4)
         {
             text.text = "Each element is super effective againts 2 others, and weak agains the remaining 2";
             frame = 5;
             return;
         }
-        if(frame == 5)
+        if (frame == 5)
         {
-            text.text = "Good Luck.";
-            continueButton.GetComponentInChildren<TextMeshProUGUI>().text = "Begin Adventure";
+            text.text = "Next you choose your action";
             frame = 6;
             return;
         }
-        if(frame == 6)
+        if (frame == 6)
+        {
+            text.text = "Damage outcomes are calculated basied on BOTH the element and action chosen";
+            frame = 7;
+            return;
+        }
+        if (frame == 7)
+        {
+            text.text = "Both you and the enemy will change color baised on the previous element chosen";
+            player.GetComponent<SpriteRenderer>().color = new Color(250,0,0);
+            frame = 8;
+            return;
+        }
+        if (frame == 8)
+        {
+            text.text = "Your final score is; Remaining Health * Points from defeating enemies. Play smart and conserve health to get a high score!";
+            frame = 9;
+            return;
+        }
+        if (frame == 9)
+        {
+            text.text = "Good Luck.";
+            continueButton.GetComponentInChildren<TextMeshProUGUI>().text = "Begin Adventure";
+            frame = 10;
+            return;
+        }
+        if(frame == 10)
         {
             SceneManager.LoadScene(2);
         }

@@ -10,11 +10,13 @@ public class MenueManager : MonoBehaviour
     private bool inventoryOpen;
     // Start is called before the first frame update
     public TextMeshProUGUI levelText;
+    public TextMeshProUGUI xpText;
     void Start()
     {
         elementMenue.SetActive(false);
         inventoryOpen = false;
         levelText.text = "Current Level: " + GlobalStats.level;
+        xpText.text = "XP to next level: " + (5*GlobalStats.level - GlobalStats.exp) + "/" + 5*GlobalStats.level;
     }
 
     public void inventoryButton()

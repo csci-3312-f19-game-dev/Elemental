@@ -1,43 +1,37 @@
 fileFormatVersion: 2
-guid: 72466159d6266d041850210a01717723
+guid: 8a9c876cd6cea59408d971a2f1e7f2c8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1116086551610273814
-    second: Level Up Notification_0
+      213: -5118050846841197754
+    second: Wall Seal_0
   - first:
-      213: -7484305298290172537
-    second: Level Up Notification_1
+      213: 2478621419820146313
+    second: Wall Seal_1
   - first:
-      213: -3063206584936303948
-    second: Level Up Notification_2
+      213: -5640657014137934754
+    second: Wall Seal_2
   - first:
-      213: 7800550662029618726
-    second: Level Up Notification_3
+      213: 1707770675529187367
+    second: Wall Seal_3
   - first:
-      213: 128958464203748869
-    second: Level Up Notification_4
+      213: 5784881646886789319
+    second: Wall Seal_4
   - first:
-      213: 7054408235865374019
-    second: Level Up Notification_5
+      213: 1411791031953821968
+    second: Wall Seal_5
   - first:
-      213: -4596621726966728676
-    second: Level Up Notification_6
+      213: -6767737531401607332
+    second: Wall Seal_6
   - first:
-      213: -1006240960036290799
-    second: Level Up Notification_7
+      213: 2499475527068883818
+    second: Wall Seal_7
   - first:
-      213: 2138369359629539398
-    second: Level Up Notification_8
+      213: -107766995164025686
+    second: Wall Seal_8
   - first:
-      213: -5263745443530044293
-    second: Level Up Notification_9
-  - first:
-      213: -7868478461309708474
-    second: Level Up Notification_10
-  - first:
-      213: -6953229264919241767
-    second: Level Up Notification_11
+      213: 1899451218453327762
+    second: Wall Seal_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -134,232 +128,211 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Level Up Notification_0
+      name: Wall Seal_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 3072
-        width: 1024
-        height: 1024
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be7c867015151df458b816811ec91036
-      internalID: -1116086551610273814
+      spriteID: 93bcb0349ddec824087a52f610e792d4
+      internalID: -5118050846841197754
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Level Up Notification_1
+      name: Wall Seal_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ddeab25c1eda97489919a9292500842
+      internalID: 2478621419820146313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall Seal_2
       rect:
         serializedVersion: 2
         x: 1024
-        y: 3072
-        width: 1024
-        height: 1024
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80e9aa2256a85f145be5505b3e207ee0
-      internalID: -7484305298290172537
+      spriteID: a61fd76134fc3a74a995a55fdc49a0a2
+      internalID: -5640657014137934754
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Level Up Notification_2
-      rect:
-        serializedVersion: 2
-        x: 2048
-        y: 3072
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d02e0fda37580af45bef154e64224cfa
-      internalID: -3063206584936303948
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Level Up Notification_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2048
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab475f2ac8e191b4eaa7bc1b9f844b85
-      internalID: 7800550662029618726
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Level Up Notification_4
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 2048
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 91498fbee4ace7b4fac28c9cf3e7aae1
-      internalID: 128958464203748869
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Level Up Notification_5
-      rect:
-        serializedVersion: 2
-        x: 2048
-        y: 2048
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c138c3b28adaab4c81f98649a4d2e49
-      internalID: 7054408235865374019
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Level Up Notification_6
+      name: Wall Seal_3
       rect:
         serializedVersion: 2
         x: 0
         y: 1024
-        width: 1024
-        height: 1024
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f168b93061e671042ad861d145d78756
-      internalID: -4596621726966728676
+      spriteID: 395b41ec8aac0144fbd85f3ffc8716ec
+      internalID: 1707770675529187367
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Level Up Notification_7
+      name: Wall Seal_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0004e26bb9391eb4c83ada204c280088
+      internalID: 5784881646886789319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall Seal_5
       rect:
         serializedVersion: 2
         x: 1024
         y: 1024
-        width: 1024
-        height: 1024
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a22206a13d543e84d944ac0e43dc58c7
-      internalID: -1006240960036290799
+      spriteID: 2a9d348a4fdf8e4438c94effeb9fd91a
+      internalID: 1411791031953821968
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Level Up Notification_8
+      name: Wall Seal_6
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 1024
-        width: 1024
-        height: 1024
+        x: 0
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e2dfd74ff6ea6741b2073a05e64b30c
-      internalID: 2138369359629539398
+      spriteID: 2c5b9fc3fa7d89d45bbb249760c1991e
+      internalID: -6767737531401607332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Level Up Notification_9
+      name: Wall Seal_7
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87d903c12d29f0446a20037a539245e3
+      internalID: 2499475527068883818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall Seal_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9329f2dee37216942b382591f8bd3017
+      internalID: -107766995164025686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall Seal_9
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1024
-        height: 1024
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00a9af6b0c197694287f4c4769423089
-      internalID: -5263745443530044293
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Level Up Notification_10
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6642d593d06b93748870d4818c6e7458
-      internalID: -7868478461309708474
+      spriteID: 91535bb49a132904591134b7d88e8145
+      internalID: 1899451218453327762
       vertices: []
       indices: 
       edges: []

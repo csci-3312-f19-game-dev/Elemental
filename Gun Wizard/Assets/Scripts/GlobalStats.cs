@@ -19,6 +19,6 @@ public static class GlobalStats
 
     public static bool init = false;
 
-    public static bool justLoaded = false;
+    public static bool justLoaded = true;
 
 }

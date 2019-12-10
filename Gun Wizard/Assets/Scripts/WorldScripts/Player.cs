@@ -15,8 +15,8 @@ public class Player : MonoBehaviour
             GlobalStats.health = GlobalStats.maxHealth;
             GlobalStats.elements = new int[] { 0, 0, 0, 0, 0 };
             GlobalStats.init = true;
-            GlobalStats.perkPoints = 2;
-            GlobalStats.exp = 0;
+            GlobalStats.perkPoints = -1;
+            GlobalStats.exp = 15;
 // Debug.Log("Setting Level.");
             GlobalStats.level = 1;
             GlobalStats.init = true;
@@ -28,22 +28,17 @@ public class Player : MonoBehaviour
     {
         if(GlobalStats.exp >= GlobalStats.level*5)
         {
-            GlobalStats.exp = GlobalStats.exp - GlobalStats.level * 5;
-            GlobalStats.level++;
-            //this automatical levels up fire - remove
-            //GlobalStats.elements[0] = GlobalStats.level;
-            //
-            GlobalStats.perkPoints++;
-            Debug.Log("Level Up! "+GlobalStats.level);
+
+            GlobalStats.perkPoints+= (int)(GlobalStats.exp)/ (int)(GlobalStats.level * 5);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        checkLevelup();
         if (GlobalStats.justLoaded)
         {
+            checkLevelup();
             gameObject.transform.position = GlobalStats.playerPosition;
             GlobalStats.justLoaded = false;
         }

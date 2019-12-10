@@ -10,6 +10,7 @@ public class MenueManager : MonoBehaviour
     private bool inventoryOpen;
     public TextMeshProUGUI LevelText;
     public TextMeshProUGUI XPText;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,8 +63,10 @@ public class MenueManager : MonoBehaviour
 
     public void levelUp(int elem)
     {
+        GlobalStats.exp = GlobalStats.exp - GlobalStats.level * 5;
         GlobalStats.elements[elem]++;
         GlobalStats.perkPoints--;
+        GlobalStats.level++;
         if(GlobalStats.perkPoints<=0){
             deactivateButtons();
         }
@@ -78,10 +81,15 @@ public class MenueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        LevelText.SetText("Current Level: " + GlobalStats.level);
-        XPText.SetText("XP: " + GlobalStats.exp+"/"+GlobalStats.level*5);
+        LevelText.text = ("Current Level: " + GlobalStats.level);
+        XPText.text = ("XP: " + GlobalStats.exp+"/"+GlobalStats.level*5);
         updateElement();
         healthBar.UpdateBar(GlobalStats.health, 20);
+        //if(GlobalStats.exp >= GlobalStats.level * 5)
+        if(GlobalStats.perkPoints > 0)
+        {
+            activateButtons();
+        }
     }
 
     private void updateElement()

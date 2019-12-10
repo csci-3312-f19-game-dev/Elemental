@@ -32,12 +32,12 @@ public class UIManager : MonoBehaviour
     void Update()
     {
 
-        playerHealth.GetComponent<Text>().text = "Health: "+playerScript.health;
-        enemyHealth.GetComponent<Text>().text = "Health: " + enemyScript.health;
-        playerAmmo.GetComponent<Text>().text = "Ammo: " + playerScript.ammo;
-        enemyAmmo.GetComponent<Text>().text = "Ammo: " + enemyScript.ammo;
-        playerShields.GetComponent<Text>().text = "Shields: " + playerScript.shields;
-        enemyShields.GetComponent<Text>().text = "Shields: " + enemyScript.shields;
+        //playerHealth.GetComponent<Text>().text = "Health: "+playerScript.health;
+       // enemyHealth.GetComponent<Text>().text = "Health: " + enemyScript.health;
+      //  playerAmmo.GetComponent<Text>().text = "Ammo: " + playerScript.ammo;
+      //  enemyAmmo.GetComponent<Text>().text = "Ammo: " + enemyScript.ammo;
+      //  playerShields.GetComponent<Text>().text = "Shields: " + playerScript.shields;
+      //  enemyShields.GetComponent<Text>().text = "Shields: " + enemyScript.shields;
         playerHealthBar.UpdateBar(playerScript.health, 20);
         enemyHealthBar.UpdateBar(enemyScript.health, GlobalStats.enemy.health);
 

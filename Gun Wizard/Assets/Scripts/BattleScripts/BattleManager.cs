@@ -160,8 +160,20 @@ public class BattleManager : MonoBehaviour
         {
             enemyScript.shields += 1;
         }
-        playerSource.PlayOneShot(playerActionAudio, 0.7F);
-        enemySource.PlayOneShot(enemyActionAudio, 0.7F);
+        if(playerActionAudio==gunFiring){
+            StartCoroutine(firePlayerGun());
+            //StartCoroutine(fireEnemyGun());
+        }
+        else{
+            playerSource.PlayOneShot(playerActionAudio, 0.7F);
+        }
+        if(enemyActionAudio==gunFiring){
+            StartCoroutine(fireEnemyGun());
+        }
+        else {
+            enemySource.PlayOneShot(enemyActionAudio, 0.7F);
+        }
+
         sm.animate(playerCurrentElement, playerCurrentAction, tempPDmgTaken,enemyCurrentElement, enemyCurrentAction, tempEDmgTaken);
 
         playerScript.health -= tempPDmgTaken;
@@ -211,4 +223,18 @@ public class BattleManager : MonoBehaviour
         if ((((e1 + 2) % 5) == e2) || (((e1 + 4) % 5) == e2)) return 1;
         else return -1;
     }
+
+    IEnumerator firePlayerGun()
+    {
+        yield return new WaitForSeconds(1f);
+        playerSource.PlayOneShot(playerActionAudio, 0.7F);
+    }
+
+    IEnumerator fireEnemyGun()
+    {
+        yield return new WaitForSeconds(1f);
+        enemySource.PlayOneShot(enemyActionAudio, 0.7F);
+    }
+
+
 }

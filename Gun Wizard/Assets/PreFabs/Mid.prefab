@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7929542457991824195}
   m_Layer: 0
   m_Name: Mid
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,11 +109,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 1}
-      - {x: -0.95105654, y: 0.30901697}
-      - {x: -0.5877852, y: -0.80901706}
-      - {x: 0.58778536, y: -0.80901694}
-      - {x: 0.9510565, y: 0.30901712}
+    - - {x: -0.041528225, y: 1.3529897}
+      - {x: -0.97727203, y: 1.6936855}
+      - {x: -2.010026, y: 0.869648}
+      - {x: -1.833631, y: -1.1204782}
+      - {x: 0.110210896, y: -1.6188164}
+      - {x: 1.0564184, y: -0.8479438}
+      - {x: 0.9925847, y: 0.30901718}
 --- !u!114 &7929542457991824193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,11 +128,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48872dde50a3d4c119bc05d70ce5f5a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
-  elementLevels: 
+  health: 10
+  elementLevels: 0000000001000000030000000100000000000000
   ammo: 0
   shields: 0
-  exp: 0
+  exp: 15
   id: 0
 --- !u!114 &7929542457991824192
 MonoBehaviour:

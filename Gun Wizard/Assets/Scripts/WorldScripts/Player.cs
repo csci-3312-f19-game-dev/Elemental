@@ -11,9 +11,10 @@ public class Player : MonoBehaviour
         playerStats = gameObject.GetComponent<Combatant>();
         if (GlobalStats.init == false)
         {
-            GlobalStats.health = 20;
-            GlobalStats.elements = new int[] { 1, 1, 1, 1, 1 };
-            GlobalStats.perkPoints = 0;
+            GlobalStats.health = 40;
+            GlobalStats.elements = new int[] { 0, 0, 0, 0, 0 };
+            GlobalStats.init = true;
+            GlobalStats.perkPoints = 2;
             GlobalStats.exp = 0;
 // Debug.Log("Setting Level.");
             GlobalStats.level = 1;

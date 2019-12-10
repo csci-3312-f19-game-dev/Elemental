@@ -13,10 +13,12 @@ public class Player : MonoBehaviour
         {
             GlobalStats.health = 20;
             GlobalStats.elements = new int[] { 1, 1, 1, 1, 1 };
-            GlobalStats.init = true;
             GlobalStats.perkPoints = 0;
             GlobalStats.exp = 0;
+// Debug.Log("Setting Level.");
             GlobalStats.level = 1;
+            GlobalStats.init = true;
+
         }
     }
 

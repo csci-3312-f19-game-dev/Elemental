@@ -11,7 +11,10 @@ public class BattleManager : MonoBehaviour
     public GameObject enemy;
     public GameObject stateManager;
     public GameObject enemyAnimator;
-
+    public AudioClip gunFiring;
+    public AudioSource playerSource;
+    public AudioSource enemySource;
+    public AudioClip reloading;
     private Combatant playerScript;
     private Combatant enemyScript;
     private Enemy enemyMethods;
@@ -22,7 +25,9 @@ public class BattleManager : MonoBehaviour
     private int playerCurrentElement;
     private int enemyCurrentAction; // attack->0, defent->1, reload->2, repair->3
     private int playerCurrentAction;
-
+    //public AudioSource playerAudioSource;
+    private AudioClip playerActionAudio;
+    private AudioClip enemyActionAudio;
 
     void Start()
     {
@@ -72,6 +77,7 @@ public class BattleManager : MonoBehaviour
     public void setPlayerAttack()
     {
         playerCurrentAction = 0;
+        playerActionAudio = gunFiring;
     }
     public void setPlayerDefend()
     {
@@ -80,6 +86,7 @@ public class BattleManager : MonoBehaviour
     public void setPlayerReload()
     {
         playerCurrentAction = 2;
+        playerActionAudio = reloading;
     }
     public void setPlayerRepair()
     {
@@ -117,6 +124,7 @@ public class BattleManager : MonoBehaviour
         {
             tempPDmgTaken = enemyScript.elementLevels[enemyCurrentElement] * multiplier(enemyCurrentElement, playerCurrentElement);
             enemyScript.ammo -= 1;
+            enemyActionAudio = gunFiring;
         }
         if (playerCurrentAction == 1) {
             tempPDmgTaken -= playerScript.elementLevels[playerCurrentElement] * multiplier(playerCurrentElement, enemyCurrentElement);
@@ -138,6 +146,7 @@ public class BattleManager : MonoBehaviour
             playerScript.ammo += 1;
         }
         if (enemyCurrentAction == 2) {
+            enemyActionAudio = reloading;
             enemyScript.ammo += 1;
         }
         if (playerCurrentAction == 3)
@@ -148,7 +157,8 @@ public class BattleManager : MonoBehaviour
         {
             enemyScript.shields += 1;
         }
-
+        playerSource.PlayOneShot(playerActionAudio, 0.7F);
+        enemySource.PlayOneShot(enemyActionAudio, 0.7F);
         sm.animate(playerCurrentElement, playerCurrentAction, tempPDmgTaken,enemyCurrentElement, enemyCurrentAction, tempEDmgTaken);
 
         playerScript.health -= tempPDmgTaken;
@@ -166,9 +176,9 @@ public class BattleManager : MonoBehaviour
                 prevKilled.Add(e);
             }
             prevKilled.Add(enemyScript.id);
-            Debug.Log("this should not be 0 :" +enemyScript.id);
+            //Debug.Log("this should not be 0 :" +enemyScript.id);
             GlobalStats.killedEnemies = prevKilled;
-            Debug.Log("was killed id :" + GlobalStats.killedEnemies[0]);
+            //Debug.Log("was killed id :" + GlobalStats.killedEnemies[0]);
 
             if(enemyScript.id != 5)
             {

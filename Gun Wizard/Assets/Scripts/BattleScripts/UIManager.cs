@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject playerHealth;
+    //public GameObject playerHealth;
     public GameObject playerAmmo;
     public GameObject playerShields;
-    public GameObject enemyHealth;
+    //public GameObject enemyHealth;
     public GameObject enemyAmmo;
     public GameObject enemyShields;
 
@@ -32,12 +32,12 @@ public class UIManager : MonoBehaviour
     void Update()
     {
 
-        //playerHealth.GetComponent<Text>().text = "Health: "+playerScript.health;
-       // enemyHealth.GetComponent<Text>().text = "Health: " + enemyScript.health;
-      //  playerAmmo.GetComponent<Text>().text = "Ammo: " + playerScript.ammo;
-      //  enemyAmmo.GetComponent<Text>().text = "Ammo: " + enemyScript.ammo;
-      //  playerShields.GetComponent<Text>().text = "Shields: " + playerScript.shields;
-      //  enemyShields.GetComponent<Text>().text = "Shields: " + enemyScript.shields;
+        //playerHealth.GetComponent<Text>().text = "x"+playerScript.health;
+        //enemyHealth.GetComponent<Text>().text = "x" + enemyScript.health;
+        playerAmmo.GetComponent<Text>().text = "x" + playerScript.ammo;
+        enemyAmmo.GetComponent<Text>().text = "x" + enemyScript.ammo;
+        playerShields.GetComponent<Text>().text = "x" + playerScript.shields;
+        enemyShields.GetComponent<Text>().text = "x" + enemyScript.shields;
         playerHealthBar.UpdateBar(playerScript.health, GlobalStats.maxHealth);
         enemyHealthBar.UpdateBar(enemyScript.health, GlobalStats.enemy.health);
 

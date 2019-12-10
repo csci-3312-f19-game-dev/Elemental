@@ -541,7 +541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrow1: {fileID: 1233721837}
   arrow2: {fileID: 2045395803}
-  elementNum: 4
+  elementNum: 1
 --- !u!114 &218440976 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 11487436, guid: 60da1df1f7edb3747bea8f735b2768d1,
@@ -975,7 +975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrow1: {fileID: 19553806}
   arrow2: {fileID: 284115045}
-  elementNum: 1
+  elementNum: 4
 --- !u!1 &506343027
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,7 +1724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrow1: {fileID: 354993546}
   arrow2: {fileID: 1603281786}
-  elementNum: 2
+  elementNum: 3
 --- !u!1 &861982649
 GameObject:
   m_ObjectHideFlags: 0
@@ -2849,7 +2849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrow1: {fileID: 1119752958}
   arrow2: {fileID: 1981902003}
-  elementNum: 3
+  elementNum: 2
 --- !u!1 &1197684128
 GameObject:
   m_ObjectHideFlags: 0

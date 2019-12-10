@@ -416,6 +416,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7929542457991824194, guid: 883b15c4f229ed242b7620f9e749b463,
+        type: 3}
+      propertyPath: m_Name
+      value: Mid (3)
+      objectReference: {fileID: 0}
     - target: {fileID: -4031793102501579853, guid: 883b15c4f229ed242b7620f9e749b463,
         type: 3}
       propertyPath: removables.Array.size
@@ -441,11 +446,6 @@ PrefabInstance:
       propertyPath: removables.Array.data[3]
       value: 
       objectReference: {fileID: 160971430}
-    - target: {fileID: 7929542457991824194, guid: 883b15c4f229ed242b7620f9e749b463,
-        type: 3}
-      propertyPath: m_Name
-      value: Mid (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 7929542457991824196, guid: 883b15c4f229ed242b7620f9e749b463,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3486,6 +3486,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7929542457991824194, guid: 883b15c4f229ed242b7620f9e749b463,
+        type: 3}
+      propertyPath: m_Name
+      value: Mid (2)
+      objectReference: {fileID: 0}
     - target: {fileID: -4031793102501579853, guid: 883b15c4f229ed242b7620f9e749b463,
         type: 3}
       propertyPath: removables.Array.size
@@ -3511,11 +3516,6 @@ PrefabInstance:
       propertyPath: removables.Array.data[3]
       value: 
       objectReference: {fileID: 395744397}
-    - target: {fileID: 7929542457991824194, guid: 883b15c4f229ed242b7620f9e749b463,
-        type: 3}
-      propertyPath: m_Name
-      value: Mid (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 7929542457991824196, guid: 883b15c4f229ed242b7620f9e749b463,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3853,6 +3853,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7929542457991824194, guid: 883b15c4f229ed242b7620f9e749b463,
+        type: 3}
+      propertyPath: m_Name
+      value: Mid (1)
+      objectReference: {fileID: 0}
     - target: {fileID: -4031793102501579853, guid: 883b15c4f229ed242b7620f9e749b463,
         type: 3}
       propertyPath: removables.Array.size
@@ -3878,11 +3883,6 @@ PrefabInstance:
       propertyPath: removables.Array.data[3]
       value: 
       objectReference: {fileID: 354135944}
-    - target: {fileID: 7929542457991824194, guid: 883b15c4f229ed242b7620f9e749b463,
-        type: 3}
-      propertyPath: m_Name
-      value: Mid (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 7929542457991824196, guid: 883b15c4f229ed242b7620f9e749b463,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4263,6 +4263,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7929542457991824194, guid: 883b15c4f229ed242b7620f9e749b463,
+        type: 3}
+      propertyPath: m_Name
+      value: Mid
+      objectReference: {fileID: 0}
     - target: {fileID: -4031793102501579853, guid: 883b15c4f229ed242b7620f9e749b463,
         type: 3}
       propertyPath: removables.Array.size
@@ -4298,11 +4303,6 @@ PrefabInstance:
       propertyPath: removables.Array.data[5]
       value: 
       objectReference: {fileID: 602578702}
-    - target: {fileID: 7929542457991824194, guid: 883b15c4f229ed242b7620f9e749b463,
-        type: 3}
-      propertyPath: m_Name
-      value: Mid
-      objectReference: {fileID: 0}
     - target: {fileID: 7929542457991824196, guid: 883b15c4f229ed242b7620f9e749b463,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4386,7 +4386,7 @@ PrefabInstance:
     - target: {fileID: 7929542457991824193, guid: 883b15c4f229ed242b7620f9e749b463,
         type: 3}
       propertyPath: health
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 883b15c4f229ed242b7620f9e749b463, type: 3}
@@ -5952,6 +5952,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7929542457991824194, guid: 883b15c4f229ed242b7620f9e749b463,
+        type: 3}
+      propertyPath: m_Name
+      value: Mid (4)
+      objectReference: {fileID: 0}
     - target: {fileID: -4031793102501579853, guid: 883b15c4f229ed242b7620f9e749b463,
         type: 3}
       propertyPath: removables.Array.size
@@ -5977,11 +5982,6 @@ PrefabInstance:
       propertyPath: removables.Array.data[3]
       value: 
       objectReference: {fileID: 160971430}
-    - target: {fileID: 7929542457991824194, guid: 883b15c4f229ed242b7620f9e749b463,
-        type: 3}
-      propertyPath: m_Name
-      value: Mid (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 7929542457991824196, guid: 883b15c4f229ed242b7620f9e749b463,
         type: 3}
       propertyPath: m_LocalPosition.x

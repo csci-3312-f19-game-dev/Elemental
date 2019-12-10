@@ -29,6 +29,9 @@ public class BattleManager : MonoBehaviour
     private AudioClip playerActionAudio;
     private AudioClip enemyActionAudio;
 
+    //public SimpleHealthBar playerHealthBar;
+    //public SimpleHealthBar enemyHealthBar;
+
     void Start()
     {
         playerScript = player.GetComponent<Combatant>();
@@ -163,7 +166,8 @@ public class BattleManager : MonoBehaviour
 
         playerScript.health -= tempPDmgTaken;
         enemyScript.health -= tempEDmgTaken;
-
+        //playerHealthBar.UpdateBar(playerScript.health, 20);
+        //enemyHealthBar.UpdateBar(enemyScript.health, GlobalStats.enemy.health);
 
         if(enemyScript.health < 1)
         {

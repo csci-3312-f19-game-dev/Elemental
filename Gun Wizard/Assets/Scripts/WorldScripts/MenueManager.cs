@@ -79,7 +79,7 @@ public class MenueManager : MonoBehaviour
     void Update()
     {
         LevelText.SetText("Current Level: " + GlobalStats.level);
-        XPText.SetText("XP Needed to Level Up: " + (GlobalStats.level * 5-GlobalStats.exp) + "/" + (GlobalStats.level*5));
+        XPText.SetText("XP: " + GlobalStats.exp+"/"+GlobalStats.level*5);
         updateElement();
         healthBar.UpdateBar(GlobalStats.health, 20);
     }

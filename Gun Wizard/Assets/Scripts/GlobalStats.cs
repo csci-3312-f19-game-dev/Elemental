@@ -10,7 +10,7 @@ public static class GlobalStats
     public static ArrayList killedEnemies = new ArrayList { };
     public static int perkPoints;
     public static int score;
-
+    public static int maxHealth;
     public static int lastScene;
 
     public static Combatant enemy;

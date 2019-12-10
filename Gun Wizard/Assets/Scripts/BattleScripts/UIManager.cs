@@ -38,7 +38,7 @@ public class UIManager : MonoBehaviour
       //  enemyAmmo.GetComponent<Text>().text = "Ammo: " + enemyScript.ammo;
       //  playerShields.GetComponent<Text>().text = "Shields: " + playerScript.shields;
       //  enemyShields.GetComponent<Text>().text = "Shields: " + enemyScript.shields;
-        playerHealthBar.UpdateBar(playerScript.health, 20);
+        playerHealthBar.UpdateBar(playerScript.health, GlobalStats.maxHealth);
         enemyHealthBar.UpdateBar(enemyScript.health, GlobalStats.enemy.health);
 
 

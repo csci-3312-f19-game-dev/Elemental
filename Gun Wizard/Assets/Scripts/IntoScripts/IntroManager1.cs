@@ -33,7 +33,7 @@ public class IntroManager1 : MonoBehaviour
         if (frame == 0)
         {
             player.SetActive(true);
-            text.text = "You are a gun weilding wizard. This is you";
+            text.text = "You are a gun wielding wizard. This is you";
             frame = 1;
             return;
         }
@@ -58,7 +58,7 @@ public class IntroManager1 : MonoBehaviour
         }
         if (frame == 4)
         {
-            text.text = "Each element is super effective againts 2 others, and weak agains the remaining 2";
+            text.text = "Each element is super effective against 2 others, and weak against the remaining 2";
             frame = 5;
             return;
         }
@@ -70,13 +70,13 @@ public class IntroManager1 : MonoBehaviour
         }
         if (frame == 6)
         {
-            text.text = "Damage outcomes are calculated basied on BOTH the element and action chosen";
+            text.text = "Damage outcomes are calculated based on BOTH the element and action chosen";
             frame = 7;
             return;
         }
         if (frame == 7)
         {
-            text.text = "Both you and the enemy will change color baised on the previous element chosen";
+            text.text = "Both you and the enemy will change color based on the previous element chosen";
             player.GetComponent<SpriteRenderer>().color = new Color(250,0,0);
             frame = 8;
             return;

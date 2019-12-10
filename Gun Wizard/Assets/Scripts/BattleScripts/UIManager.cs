@@ -19,6 +19,8 @@ public class UIManager : MonoBehaviour
     private Combatant playerScript;
     private Combatant enemyScript;
 
+    public SimpleHealthBar playerHealthBar;
+    public SimpleHealthBar enemyHealthBar;
 
     void Start()
     {
@@ -29,12 +31,16 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //playerHealth.GetComponent<Text>().text = "Health: "+playerScript.health;
-        //enemyHealth.GetComponent<Text>().text = "Health: " + enemyScript.health;
-        playerAmmo.GetComponent<Text>().text = "x" + playerScript.ammo;
-        enemyAmmo.GetComponent<Text>().text = "x" + enemyScript.ammo;
-        playerShields.GetComponent<Text>().text = "x" + playerScript.shields;
-        enemyShields.GetComponent<Text>().text = "x" + enemyScript.shields;
+
+        playerHealth.GetComponent<Text>().text = "Health: "+playerScript.health;
+        enemyHealth.GetComponent<Text>().text = "Health: " + enemyScript.health;
+        playerAmmo.GetComponent<Text>().text = "Ammo: " + playerScript.ammo;
+        enemyAmmo.GetComponent<Text>().text = "Ammo: " + enemyScript.ammo;
+        playerShields.GetComponent<Text>().text = "Shields: " + playerScript.shields;
+        enemyShields.GetComponent<Text>().text = "Shields: " + enemyScript.shields;
+        playerHealthBar.UpdateBar(playerScript.health, 20);
+        enemyHealthBar.UpdateBar(enemyScript.health, GlobalStats.enemy.health);
+
 
     }
 }

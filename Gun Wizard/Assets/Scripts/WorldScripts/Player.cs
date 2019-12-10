@@ -16,7 +16,10 @@ public class Player : MonoBehaviour
             GlobalStats.init = true;
             GlobalStats.perkPoints = 2;
             GlobalStats.exp = 0;
+// Debug.Log("Setting Level.");
             GlobalStats.level = 1;
+            GlobalStats.init = true;
+
         }
     }
 

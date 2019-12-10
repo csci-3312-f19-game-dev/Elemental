@@ -217,7 +217,7 @@ public class BattleManager : MonoBehaviour
             {
                 prevKilled.Add(e);
             }
-            prevKilled.Add(enemyScript.id);
+            prevKilled.Add(enemyScript.deathID);
             //Debug.Log("this should not be 0 :" +enemyScript.id);
             GlobalStats.killedEnemies = prevKilled;
             //Debug.Log("was killed id :" + GlobalStats.killedEnemies[0]);

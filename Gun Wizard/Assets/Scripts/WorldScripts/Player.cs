@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
         playerStats = gameObject.GetComponent<Combatant>();
         if (GlobalStats.init == false)
         {
-            GlobalStats.maxHealth = 40;
+            GlobalStats.maxHealth = 50;
             GlobalStats.health = GlobalStats.maxHealth;
             GlobalStats.elements = new int[] { 0, 0, 0, 0, 0 };
             GlobalStats.init = true;

@@ -15,8 +15,8 @@ public class OverworldManager : MonoBehaviour
         enemies = GameObject.FindGameObjectsWithTag("enemy");
         foreach (GameObject e in enemies)
         {
-            //Debug.Log("looking for id :" + e.GetComponent<Combatant>().id);
-            if (GlobalStats.killedEnemies.Contains(e.GetComponent<Combatant>().id))
+            //Debug.Log("looking for id :" + e.GetComponent<Combatant>().deathID);
+            if (GlobalStats.killedEnemies.Contains(e.GetComponent<Combatant>().deathID))
             {
                 //Debug.Log("desry");
                 if (e.GetComponent<Combatant>().id == 3) e.GetComponent<Unlock>().unlock();

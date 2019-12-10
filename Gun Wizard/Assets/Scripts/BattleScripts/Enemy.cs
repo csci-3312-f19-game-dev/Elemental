@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
         EnemyCombatant.ammo = 1;
         EnemyCombatant.shields = 1;
         EnemyCombatant.id = GlobalStats.enemy.id;
+        EnemyCombatant.deathID = GlobalStats.enemy.deathID;
     }
 
     public int getElement(){

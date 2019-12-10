@@ -11,10 +11,16 @@ public class BattleManager : MonoBehaviour
     public GameObject enemy;
     public GameObject stateManager;
     public GameObject enemyAnimator;
+
     public AudioClip gunFiring;
     public AudioSource playerSource;
     public AudioSource enemySource;
     public AudioClip reloading;
+    public AudioSource music;
+    public AudioClip gMusic;
+    public AudioClip mMusic;
+    public AudioClip bMusic;
+
     private Combatant playerScript;
     private Combatant enemyScript;
     private Enemy enemyMethods;
@@ -28,6 +34,7 @@ public class BattleManager : MonoBehaviour
     //public AudioSource playerAudioSource;
     private AudioClip playerActionAudio;
     private AudioClip enemyActionAudio;
+    
 
     //public SimpleHealthBar playerHealthBar;
     //public SimpleHealthBar enemyHealthBar;
@@ -42,6 +49,25 @@ public class BattleManager : MonoBehaviour
         playerScript.elementLevels = GlobalStats.elements;
         playerScript.ammo = 1;
         playerScript.shields = 1;
+
+        if(GlobalStats.enemyID == 1)
+        {
+            music.loop = true;
+            music.clip = gMusic;
+            music.Play();
+        }
+        if (GlobalStats.enemyID == 3)
+        {
+            music.loop = true;
+            music.clip = mMusic;
+            music.Play();
+        }
+        if (GlobalStats.enemyID == 5)
+        {
+            music.loop = true;
+            music.clip = bMusic;
+            music.Play();
+        }
 
     }
 

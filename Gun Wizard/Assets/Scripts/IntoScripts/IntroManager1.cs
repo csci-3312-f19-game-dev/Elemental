@@ -89,7 +89,7 @@ public class IntroManager1 : MonoBehaviour
         }
         if (frame == 9)
         {
-            text.text = "Good Luck.";
+            text.text = "Good Luck. - Make sure to level up right away ;)";
             continueButton.GetComponentInChildren<TextMeshProUGUI>().text = "Begin Adventure";
             frame = 10;
             return;

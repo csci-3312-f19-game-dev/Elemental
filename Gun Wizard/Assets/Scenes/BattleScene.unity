@@ -1120,7 +1120,7 @@ PrefabInstance:
     - target: {fileID: 4782130278488740797, guid: 1f4fbb2c507987940960b3096281c3d3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.98
+      value: 9.68
       objectReference: {fileID: 0}
     - target: {fileID: 4782130278488740797, guid: 1f4fbb2c507987940960b3096281c3d3,
         type: 3}
@@ -1725,6 +1725,133 @@ MonoBehaviour:
   arrow1: {fileID: 354993546}
   arrow2: {fileID: 1603281786}
   elementNum: 3
+--- !u!1 &846303385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 846303387}
+  - component: {fileID: 846303386}
+  m_Layer: 0
+  m_Name: BackgraoundMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &846303386
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846303385}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &846303387
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846303385}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.392016, y: -2.778097, z: -138.13812}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &861982649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,6 +1890,10 @@ MonoBehaviour:
   playerSource: {fileID: 1171629710}
   enemySource: {fileID: 1648601556}
   reloading: {fileID: 8300000, guid: 6b3c2b98e0a504354ac610ffdc9c67f1, type: 3}
+  music: {fileID: 846303386}
+  gMusic: {fileID: 8300000, guid: a271f1034927e5e4fb1e3781d206da58, type: 3}
+  mMusic: {fileID: 8300000, guid: 1fd8bcc47d2d7e54f814c0f7c386d22c, type: 3}
+  bMusic: {fileID: 8300000, guid: 018b1d4167e620c4796c325c57e0789f, type: 3}
 --- !u!4 &861982651
 Transform:
   m_ObjectHideFlags: 0
@@ -1811,7 +1942,7 @@ PrefabInstance:
     - target: {fileID: 4807876797600498269, guid: 3459c44d5821d4544ba50cb827a66656,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.96
+      value: 9.660001
       objectReference: {fileID: 0}
     - target: {fileID: 4807876797600498269, guid: 3459c44d5821d4544ba50cb827a66656,
         type: 3}

@@ -8,6 +8,7 @@ public class OverworldManager : MonoBehaviour
     public GameObject[] enemies;
     public GameObject levelup;
     public GameObject player;
+    public 
     void Start()
     {
         //if(!GlobalStats.justLoaded)
@@ -36,6 +37,6 @@ public class OverworldManager : MonoBehaviour
             Debug.Log("no perks");
             levelup.SetActive(false);
         }
-        levelup.GetComponent<Transform>().position = new Vector3(player.GetComponent<Transform>().position.x - 13f, player.GetComponent<Transform>().position.y + 7, player.GetComponent<Transform>().position.z);
+        levelup.GetComponent<Transform>().position = new Vector3(player.GetComponent<Transform>().position.x - 13f, player.GetComponent<Transform>().position.y + 6.8f, player.GetComponent<Transform>().position.z);
     }
 }

@@ -6,7 +6,7 @@ public static class GlobalStats
 {
     public static int health, level, exp;
     public static int[] elements;
-    public static Vector3 playerPosition;
+    public static Vector3 playerPosition = new Vector3(-37.8f, 0,0);
     public static ArrayList killedEnemies = new ArrayList { };
     public static int perkPoints;
     public static int score;
